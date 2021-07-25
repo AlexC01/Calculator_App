@@ -1,4 +1,4 @@
-# Todo App
+# Calculator App
 ![](images/screenshot.png)
 
 ## Description
