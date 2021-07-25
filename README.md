@@ -14,4 +14,4 @@ If you want to test it in real time: https://alexc01.github.io/Calculator_App/
 
 - Semantic HTML5
 - CSS
-- Javascript
+- JavaScript
