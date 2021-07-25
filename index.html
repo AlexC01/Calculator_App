@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator app</title>
 </head>
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="padre_container">
+      <div class="container__hijo">
+        <div class="container__head">
+          <p>calc</p>
+        </div>
+        <div class="container__medium">
+          <p class="result"></p>
+        </div>
+        <div class="keypad">
+          <div class="keypad__container">
+            <div class="keypad_item key_num"><p class="keypad__keys">7</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">8</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">9</p></div>
+            <div class="keypad_item delete"><p class="keypad__keys del">DEL</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">4</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">5</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">6</p></div>
+            <div class="keypad_item sum"><p class="keypad__keys">+</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">1</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">2</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">3</p></div>
+            <div class="keypad_item menos"><p class="keypad__keys">-</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">.</p></div>
+            <div class="keypad_item key_num"><p class="keypad__keys">0</p></div>
+            <div class="keypad_item division"><p class="keypad__keys">/</p></div>
+            <div class="keypad_item mult"><p class="keypad__keys">x</p></div>
+            <div class="keypad_item reset"><p class="keypad__keys reset">RESET</p></div>
+            <div class="keypad_item equal"><p class="keypad__keys igual">=</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>
