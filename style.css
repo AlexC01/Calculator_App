@@ -11,16 +11,24 @@
     --background-1: hsl(222, 26%, 31%);
     --background1-result: hsl(224, 36%, 15%);
     --background1-keypadback: hsl(223, 31%, 20%);
+
+    --secondbg: hsl(0, 0%, 90%);
+    --second_text: hsl(60, 10%, 19%);
+    --secondbg_keypad: hsl(0, 5%, 81%);
+    --secondbg-result: hsl(0, 0%, 93%);
+
+    --thirdbg: hsl(268, 75%, 9%);
+    --third_text: hsl(52, 100%, 62%);
+    --third_text_2:hsl(0, 0, 100%);
+    --third_semain: hsl(268, 71%, 12%);
 }
 
 body{
     background-color: var(--background-1);
 }
 
-p{
-    font-size: 32px;
-    text-align: left;
-    color: white;
+body.sectheme{
+    background-color: var(--secondbg);
 }
 
 .padre_container{
@@ -29,6 +37,91 @@ p{
     align-items: center;
     flex-direction: column;
     margin-top: 120px;
+}
+
+.p-1{
+    font-size: 32px;
+    color: white;
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.que{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    text-align: right;
+    
+}
+
+.theme{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    padding-top: 6px;
+}
+
+
+.container__head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right p{
+    margin: 0 7px;
+    font-size: 12px;
+    display: inline;
+    color: white;
+}
+
+body.sectheme .p-1, body.sectheme .theme, body.sectheme .right p{
+    color: var(--second_text);
+}
+
+.toggle{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.box{
+    width: 70px;
+    height: 25px;
+    background-color: var(--background1-keypadback);
+    border-radius: 30px;
+    margin-left: 4px;
+
+}
+
+body.sectheme .box{
+    background-color: var(--secondbg_keypad);
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    transition: margin-left .2s linear;
+}
+
+.second_theme{
+    margin-left: 25px;
+    transition: margin-left .2s linear;
+}
+
+.third_theme{
+    margin-left: 50px;
+    transition: margin-left .2s linear;
 }
 
 .container__medium{
@@ -43,6 +136,16 @@ p{
 .result{
     text-align: end;
     font-weight: bold;
+    font-size: 32px;
+    color: white;
+}
+
+body.sectheme .container__medium{
+    background-color: var(--secondbg-result);
+}
+
+body.sectheme .result{
+    color: var(--second_text);
 }
 
 .keypad__container{
@@ -70,6 +173,15 @@ p{
 
 .keypad__keys{
     color: hsl(221, 14%, 31%);
+    font-size: 32px;
+}
+
+body.sectheme .keypad__keys{
+    color: var(--second_text);
+}
+
+body.thirdtheme .keypad__keys{
+    color: var(--third_text);
 }
 
 .keypad_item:active{
@@ -101,4 +213,89 @@ p{
 .reset, .del{
     font-size: 22px;
     color: white;
+}
+
+body.sectheme .reset, body.sectheme .del, body.sectheme .igual{
+    color: white;
+}
+body.thirdtheme .reset, body.thirdtheme .del{
+    color: white;
+}
+body.thirdtheme .igual{
+    color: hsl(198, 20%, 13%);
+}
+
+body.sectheme .keypad__container{
+    background-color: var(--secondbg_keypad);
+}
+
+body.sectheme .keypad_item{
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 4px 0px 0px hsl(35, 11%, 61%);
+}
+
+body.sectheme .keypad_item:active{
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+body.sectheme .circle{
+    background-color: hsl(25, 98%, 40%);
+}
+
+body.sectheme .keypad_item:last-child{
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 4px 0px 0px hsl(25, 99%, 27%);
+}
+
+body.sectheme .keypad_item:last-child:active{
+    box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+}
+
+body.sectheme .keypad_item:nth-child(17), body.sectheme .keypad_item:nth-child(4){
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 4px 0px 0px hsl(185, 58%, 25%);
+}
+
+body.sectheme .keypad_item:nth-child(17):active, body.sectheme .keypad_item:nth-child(4):active{
+    box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+}
+
+body.thirdtheme{
+    background-color: var(--thirdbg);
+}
+
+body.thirdtheme .box, body.thirdtheme .keypad__container, body.thirdtheme .container__medium{
+    background-color: var(--third_semain);
+}
+
+body.thirdtheme .p-1, body.thirdtheme .right p, body.thirdtheme .theme, body.thirdtheme .result{
+    color: var(--third_text);
+}
+
+body.thirdtheme .keypad_item{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 4px 0px 0px hsl(290, 70%, 36%);
+}
+
+body.thirdtheme .keypad_item:active{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+}
+
+body.thirdtheme .keypad_item:nth-child(17), body.thirdtheme .keypad_item:nth-child(4){
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0px 4px 0px 0px hsl(285, 91%, 52%);
+}
+
+body.thirdtheme .keypad_item:nth-child(17):active, body.thirdtheme .keypad_item:nth-child(4):active{
+    box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+}
+
+body.thirdtheme .keypad_item:last-child{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 4px 0px 0px hsl(177, 92%, 70%);
+}
+
+body.thirdtheme .keypad_item:last-child:active{
+    box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
 }

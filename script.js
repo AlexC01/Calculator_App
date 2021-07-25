@@ -6,10 +6,56 @@ const mult = document.querySelector('.mult');
 const div = document.querySelector('.division');
 const equal = document.querySelector('.equal');
 const reset = document.querySelector('.reset');
+const circle = document.querySelector('.circle');
+let themes = localStorage.getItem('themes');
 let board = document.querySelector('.result');
 let printNum = "";
 let first = "";
 let opcion = "";
+
+const enableFirstTheme = () => {
+    document.body.classList.remove('thirdtheme');
+    localStorage.setItem('themes', 'first');
+    circle.classList.remove('third_theme');
+}
+
+const enableSecondTheme = () => {
+    document.body.classList.add('sectheme');
+    localStorage.setItem('themes', 'second');
+    circle.classList.add('second_theme');
+}
+
+const enableThirdTheme = () => {
+    document.body.classList.remove('sectheme');
+    localStorage.setItem('themes', 'third');
+    document.body.classList.add('thirdtheme');
+    circle.classList.remove('second_theme');
+    circle.classList.add('third_theme');
+}
+
+if (themes){
+    if (themes == 'second') enableSecondTheme();
+    if (themes == 'third') enableThirdTheme();
+}
+
+circle.addEventListener('click', ()=>{
+    themes = localStorage.getItem('themes');
+    if(themes){
+        switch(themes){
+            case 'first':
+                enableSecondTheme();
+                break;
+            case 'second':
+                enableThirdTheme();
+                break;
+            case 'third':
+                enableFirstTheme();
+                break;
+        }
+    }else{
+        enableSecondTheme();
+    }
+})
 
 items.forEach(item => {
     item.addEventListener("click",()=>{
